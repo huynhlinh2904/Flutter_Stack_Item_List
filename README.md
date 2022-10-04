@@ -1,4 +1,4 @@
-# mobile_capstone_fpt
+# Mobile Stack Home
 
 A new Flutter project.
 
