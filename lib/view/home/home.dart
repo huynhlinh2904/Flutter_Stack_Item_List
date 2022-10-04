@@ -172,58 +172,63 @@ class _HomeState extends State<Home> {
                 ),
               ),
               const SizedBox(height: 10,),
-              Container(
-                width: double.infinity,
-                decoration: const BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(50),
-                    topRight: Radius.circular(50),
+              GestureDetector(
+                onTap: (){
+                  print("object");
+                },
+                child: Container(
+                  width: double.infinity,
+                  decoration: const BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(50),
+                      topRight: Radius.circular(50),
+                    ),
                   ),
-                ),
-                  child: Column(
-                    children: [
-                       ListView.builder(
-                        physics: ClampingScrollPhysics(),
-                        scrollDirection: Axis.vertical,
-                        shrinkWrap: true,
-                        itemCount: 10,
-                        itemBuilder: (BuildContext context, int index) {
-                          return Container(
-                            height:mqHeight / 1.9,
-                            width: double.infinity,
-                                child: Column(
-                                  children: [
-                                    Card(
-                                      shape: RoundedRectangleBorder(
-                                        side: const BorderSide(
-                                            color: Colors.white10, width: 1
+                    child: Column(
+                      children: [
+                         ListView.builder(
+                          physics: ClampingScrollPhysics(),
+                          scrollDirection: Axis.vertical,
+                          shrinkWrap: true,
+                          itemCount: 10,
+                          itemBuilder: (BuildContext context, int index) {
+                            return Container(
+                              height:mqHeight / 1.9,
+                              width: double.infinity,
+                                  child: Column(
+                                    children: [
+                                      Card(
+                                        shape: RoundedRectangleBorder(
+                                          side: const BorderSide(
+                                              color: Colors.white10, width: 1
+                                          ),
+                                          borderRadius: BorderRadius.circular(50),
                                         ),
-                                        borderRadius: BorderRadius.circular(50),
-                                      ),
-                                      clipBehavior: Clip.none,
-                                      elevation: 20,
-                                      child: SizedBox(
-                                        height: 350,
-                                        width: 300,
-                                        child: Column(
-                                          children: [
-                                            Image.asset('assets/images/anh_1.png'),
-                                            Text('data'),
-                                            Text('data'),
-                                          ],
+                                        clipBehavior: Clip.none,
+                                        elevation: 20,
+                                        child: SizedBox(
+                                          height: 350,
+                                          width: 300,
+                                          child: Column(
+                                            children: [
+                                              Image.asset('assets/images/anh_1.png'),
+                                              Text('data'),
+                                              Text('data'),
+                                            ],
+                                          ),
                                         ),
-                                      ),
-                                      color: Colors.white,
-                                    )
-                                  ],
-                                ),//),
-                          );
-                        },
-                      ),
-                    ],
+                                        color: Colors.white,
+                                      )
+                                    ],
+                                  ),//),
+                            );
+                          },
+                        ),
+                      ],
+                    ),
                   ),
-                ),
+              ),
             ],
           ),
       ),
